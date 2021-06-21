@@ -1,62 +1,39 @@
 <script>
-	let name = "World";
+	import WhatIDo from "./Components/WhatIDo.svelte";
+	import WhereIveDoneIt from "./Components/WhereIveDoneIt.svelte";
+	import HowIDoIt from "./Components/HowIDoIt.svelte";
+	import Sidebar from "./Components/Sidebar.svelte";
+	import HeaderBar from "./Components/HeaderBar.svelte";
+	import { pageNumber } from "./store.js";
+
+	let pageNumberValue;
+
+	pageNumber.subscribe(val => {
+		pageNumberValue = val;
+	})
 </script>
 
-<main>
-	<div class="outer-circle">
-		<div class="pfp"></div>
-	</div>
-</main>
-
+<div class="grid-row">
+	<Sidebar />
+	
+	<main>
+		<HeaderBar />
+		{#if pageNumberValue === 1}
+		<WhatIDo />
+		{:else if pageNumberValue === 2}
+		<WhereIveDoneIt />
+		{:else if pageNumberValue === 3}
+		<HowIDoIt />
+		{:else}
+		<WhatIDo />
+		{/if}
+	</main>
+</div>
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.outer-circle {
-		width: 200px;
-		height: 200px;
-		margin: 0;
-		padding: 3px;
-
-		transition: 0.2s ease;
-		animation-name: rotate-circle;
-		animation-duration: 1.5s;
-		animation-timing-function: ease;
-		animation-iteration-count: infinite;
-
-		filter: drop-shadow( -10px 0 8px rgba(0, 132, 255, 0.3));
-
-		background: linear-gradient(to right, rgba(0, 132, 255, 1) 0%, transparent 25%);
-		border-radius: 200%;
-	}
-
-	.pfp {
-		width: 200px;
-		height: 200px;
-
-		background-color: gray;
-		
-		border-radius: 50%;
-	}
-
-	@keyframes rotate-circle {
-		from {
-			transform: rotate(0)
-		}
-		to {
-			transform: rotate(360deg)
-		}
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	.grid-row {
+		height: 100vh;
+		width: 100vw;
+		display: grid;
+		grid-template-columns: 210px auto;
 	}
 </style>
