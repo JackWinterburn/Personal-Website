@@ -14,7 +14,9 @@
 </script>
 
 <div class="grid-row">
-	<Sidebar />
+	<div class="sidebar-wrapper">
+		<Sidebar />
+	</div>
 	
 	<main>
 		<HeaderBar />
@@ -34,6 +36,16 @@
 		height: 100vh;
 		width: 100vw;
 		display: grid;
-		grid-template-columns: 210px auto;
+		grid-template-columns: 230px auto;
+	}
+
+	@media only screen and (max-width: 970px) {
+		.sidebar-wrapper {
+			display: none;
+		}
+
+		.grid-row {
+			grid-template-columns: auto;
+		}
 	}
 </style>

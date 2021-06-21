@@ -46,7 +46,7 @@
     }
 
     ul {
-        margin-top: 3em;
+        margin-top: 2em;
 
         list-style-type: none;
     }
@@ -65,5 +65,9 @@
 
     .active {
         color: white
+    }
+
+    h3 {
+        margin-top: 5px;
     }
 </style>
