@@ -35,6 +35,18 @@
             How I Do It
         </li>
     </ul>
+
+    <div class="social-links">
+        <a href="https://github.com/JackWinterburn" target="blank">
+            <div class="social-link github"></div>
+        </a>
+        <a href="https://twitter.com/JackIsBack___" target="blank">
+            <div class="social-link twitter"></div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCtOSXK4gm_3ab8D4vRtkGAg" target="blank">
+            <div class="social-link youtube"></div>
+        </a>
+    </div>
 </div>
 
 <style>
@@ -65,6 +77,47 @@
 
     .active {
         color: white
+    }
+
+    .social-links {
+        margin-top: 10em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-link {
+        margin: 0.7em;
+
+        width: 30px;
+        height: 30px;
+
+        background-color: white;
+
+        border-radius: 50%;
+
+        transition: 0.2s ease;
+    }
+
+    .social-link:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 3px 6px #0084ff9c;
+    }
+
+    .github {
+        background-image: url(./github.png);
+        background-size: cover;
+    }
+
+    .twitter {
+        background-image: url(./twitter.png);
+        background-size: cover;
+    }
+
+    .youtube {
+        background-image: url(./yt.png);
+        background-size: cover;
     }
 
     h3 {
