@@ -5,7 +5,7 @@
         &nbsp;
         <div class="p-text">
             <p>
-                I’m a 15 year old <span class="important-text">software engineer</span>, <span class="important-text">tech enthusiast</span> and cryptography investor.
+                I’m a masterful <span class="important-text">software engineer</span>, <span class="important-text">tech enthusiast</span> and cryptography investor.
             </p>
             &nbsp;
             <p>
@@ -36,6 +36,7 @@
         margin-bottom: 30px;
 
         display: block;
+        z-index: -1;
 
         background-color: gray;
         background-image: url("./pfp.png");

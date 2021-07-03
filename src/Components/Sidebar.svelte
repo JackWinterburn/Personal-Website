@@ -40,7 +40,7 @@
 <style>
     .sidebar {
         padding: 2em;
-        height: 100vh;
+        height: 100%;
 
         border-right: 1px solid #b7b7b733;
     }

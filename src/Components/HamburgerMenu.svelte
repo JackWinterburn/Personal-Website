@@ -1,4 +1,12 @@
-<div class="menu">
+<script>
+    import { showMobileMenuModal } from "../store.js";
+
+    function updateShowMobileMenuModal() {
+        showMobileMenuModal.set(true);
+    }
+</script>
+
+<div class="menu" on:click={updateShowMobileMenuModal}>
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>

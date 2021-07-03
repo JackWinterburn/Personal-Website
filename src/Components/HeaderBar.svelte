@@ -9,6 +9,7 @@
     pageNumber.subscribe(val => {
         pageNumberValue = val;
     })
+
 </script>
 
 <header>
