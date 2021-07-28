@@ -73,6 +73,7 @@
         position: absolute;
 
         background-color: transparent;
+        z-index: 3;
     }
 
     .blur-background {
@@ -85,6 +86,7 @@
         position: absolute;
 
         background-color: rgba(0,0,0,0.9);
+        z-index: 3;
     }
 
     header {

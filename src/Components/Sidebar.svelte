@@ -90,8 +90,8 @@
     .social-link {
         margin: 0.7em;
 
-        width: 30px;
-        height: 30px;
+        width: 27px;
+        height: 27px;
 
         background-color: white;
 

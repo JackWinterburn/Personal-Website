@@ -36,7 +36,7 @@
 		width: 200px;
 		height: 200px;
 
-		background-color: gray;
+		background-color: #030303;
 		
 		border-radius: 50%;
 	}
