@@ -45,6 +45,7 @@
 .widi-main {
     width: 100%;
     margin-top: 25px;
+    transition: 0.3s ease;
 }
 
 .featured {

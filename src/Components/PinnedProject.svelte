@@ -1,11 +1,13 @@
 <script>
     import LanguageColors from "../langColors.js";
+    import tilt from "../tilt.js";
 
     export let title;
     export let description;
     export let languageUrl;
     export let htmlUrl;
 
+    let reverse = false;
     let languages = {};
     let languagePercentages = {};
 
@@ -51,7 +53,8 @@
         return style;
     }
 </script>
-<a href={htmlUrl}>
+
+<a href={htmlUrl} use:tilt={{ scale: 1.07, reverse }}>
     <div class="project">
         <header>
             <div class="logo"></div>
@@ -87,6 +90,11 @@
     a {
         text-decoration: none;
         color: white;
+        z-index: 1;
+    }
+
+    a:hover {
+        z-index: 2;
     }
 
     .project {
@@ -94,15 +102,13 @@
 
         height: 100%;
         
-        background-color: #030303;
+        background-color: rgba(2, 2, 2, .7);
         border: 1px solid rgb(20, 20, 20);
         border-radius: 10px;
-        z-index: 1;
     }
 
     .project:hover {
-        background-color: rgb(20, 20, 20);
-        z-index: 2;
+        background-color: rgba(20, 20, 20, .7);
         cursor: pointer;
     }
 
@@ -160,7 +166,7 @@
     }
 
     .lci {
-        margin: 0.2em;
+        margin: 0.4em;
         display: flex;
         align-items: center;
     }
@@ -174,15 +180,14 @@
 
 
     @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 </style>
