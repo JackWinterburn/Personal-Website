@@ -90,6 +90,7 @@
         text-decoration: none;
         color: white;
         z-index: 1;
+        margin: 0.5em;
     }
 
     a:hover {
@@ -97,8 +98,6 @@
     }
 
     .project {
-        margin: 0.5em;
-
         height: 100%;
         
         background-color: rgba(2, 2, 2, .7);
@@ -138,6 +137,12 @@
     .description {
         padding: 1em;
         text-overflow: ellipsis;
+    }
+
+    .description-body {
+        color: rgb(175, 175, 175);
+        font-weight: 600;
+        font-size: 15px;
     }
 
     .languages {
