@@ -1,6 +1,5 @@
 <script>
     import LanguageColors from "../langColors.js";
-    import tilt from "../tilt.js";
 
     export let title;
     export let description;
@@ -54,7 +53,7 @@
     }
 </script>
 
-<a href={htmlUrl} use:tilt={{ scale: 1.07, reverse }}>
+<a href={htmlUrl}>
     <div class="project">
         <header>
             <div class="logo"></div>
@@ -105,11 +104,15 @@
         background-color: rgba(2, 2, 2, .7);
         border: 1px solid rgb(20, 20, 20);
         border-radius: 10px;
+
+        transition: 0.2s ease;
     }
 
     .project:hover {
-        background-color: rgba(20, 20, 20, .7);
+        background-color: rgba(20, 20, 20);
         cursor: pointer;
+        transform: scale(1.08);
+        border: 2px solid #0084ff;
     }
 
     header {
